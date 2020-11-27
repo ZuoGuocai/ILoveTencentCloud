@@ -9,6 +9,7 @@ RUN set -ex \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "LANG=en_US.utf8" > /etc/locale.conf \
     && wget  -O  /etc/yum.repos.d/openresty.repo   https://openresty.org/package/centos/openresty.repo \
+    && sudo yum check-update \
     && yum install -y openresty \
     && yum remove -y wget \
     && yum clean all \

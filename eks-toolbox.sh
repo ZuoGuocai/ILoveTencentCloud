@@ -43,6 +43,7 @@ function Diag-Error(){
 	kubectl describe nodes
 	kubectl describe pod ${pod_name}  -n ${ns_name}
 	kubectl logs -f  ${pod_name}
+	kubectl get events -A
 	kubectl exec -it   ${pod_name}  /bin/bash  -n ${ns_name}
 	kubectl exec -it   ${pod_name}  /bin/sh  -n ${ns_name}
 	kubectl exec -it   ${pod_name}  cmd.exe  -n ${ns_name}
